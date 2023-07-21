@@ -29,10 +29,18 @@ const Board = () => {
 
     return (
         <div id="board">
-            <div>
-                <button onClick={() => draw(deckId, setHand, hand)}>DRAW</button>
-                <p>{scored}</p>
-            </div>
+            {scored < 21 &&
+                <div>
+                    <button onClick={() => draw(deckId, setHand, hand)}>DRAW</button>
+                    <p>{scored}</p>
+                </div>
+            }
+            {scored > 21 &&
+                <p>Bust!</p>
+            }
+            {scored === 21 &&
+                <p>BlackJack!</p>
+            }
             <div id="handContainer">
                 <div id="hand">
                     {hand != undefined &&
@@ -46,7 +54,6 @@ const Board = () => {
                     }
                 </div>
             </div>
-
         </div>
     )
 
