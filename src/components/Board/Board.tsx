@@ -36,10 +36,16 @@ const Board = () => {
                 </div>
             }
             {scored > 21 &&
-                <p>Bust!</p>
+                <div>
+                    <p>Bust!</p>
+                    <button onClick={() => shuffle(setHand, setdeckId)}>Play Again!</button>
+                </div>
             }
             {scored === 21 &&
-                <p>BlackJack!</p>
+                <div>
+                    <p>BlackJack!</p>
+                    <button onClick={() => shuffle(setHand, setdeckId)}>Play Again!</button>
+                </div>
             }
             <div id="handContainer">
                 <div id="hand">
