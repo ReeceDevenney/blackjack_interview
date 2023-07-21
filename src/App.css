@@ -17,16 +17,17 @@ img {
 
 .App {
   text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 #board {
   background-color: green;
   width: 500px;
   height: 500px;
-  margin: auto;
   display: flex;
   justify-content: center;
-  align-items: end;
+  flex-direction: column-reverse;
 }
 
 
@@ -35,4 +36,10 @@ img {
   width: 400px;
   height: 150px;
   margin-bottom: 16px;
+}
+
+#handContainer {
+  display: flex;
+  justify-content: center;
+  align-items: end;
 }
