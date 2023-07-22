@@ -22,7 +22,6 @@ const Board = () => {
 
     useEffect(() => {
         if (hand) {
-            console.log(hand)
             score(hand, scored, setScored)
         }
     }, [hand])
